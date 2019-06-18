@@ -22,8 +22,11 @@ const App = () => {
 					boxShadow: '0 3px 5px 0 rgba(0, 0, 0, 0.08)',
 					display: 'flex',
 					alignItems: 'center',
-					justifyContent: 'center'
+					justifyContent: 'center',
+					flexDirection: 'column'
 				}}>
+				<h3>Value: {sliderValue}%</h3>
+
 				<div
 					css={{
 						width: '90%',
@@ -36,13 +39,13 @@ const App = () => {
 						css={{
 							width: 40,
 							height: 40,
-							left: -20,
+							left: `calc(${sliderValue}% - 20px)`,
 							top: -10,
 							position: 'absolute',
 							background: '#e46361',
 							opacity: 1,
-							borderRadius: '50%',
-							transform: `translateX(${sliderValue}%)`
+							cursor: 'pointer',
+							borderRadius: '50%'
 						}}
 					/>
 				</div>

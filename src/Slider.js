@@ -24,11 +24,7 @@ const Slider = ({ sliderValue, setSliderValue, min = 0, max = 100 }) => {
 				clamp(
 					min,
 					max,
-					computeLinearScale(
-						[0, width],
-						[min, max],
-						pageX - left - pageXOffset
-					)
+					computeLinearScale([0, width], [min, max], pageX - left)
 				)
 			)
 		)

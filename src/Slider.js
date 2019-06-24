@@ -1,6 +1,7 @@
 import React from 'react'
+import Dot from './Dot'
 
-const Slider = ({ sliderValue, setSliderValue, }) => {
+const Slider = ({ sliderValue, setSliderValue }) => {
 	return (
 		<div
 			css={{
@@ -10,19 +11,7 @@ const Slider = ({ sliderValue, setSliderValue, }) => {
 				borderRadius: 200,
 				background: '#02606f'
 			}}>
-			<div
-				css={{
-					width: 40,
-					height: 40,
-					left: `calc(${sliderValue}% - 20px)`,
-					top: -10,
-					position: 'absolute',
-					background: '#e46361',
-					opacity: 1,
-					cursor: 'pointer',
-					borderRadius: '50%'
-				}}
-			/>
+			<Dot position={sliderValue} />
 		</div>
 	)
 }

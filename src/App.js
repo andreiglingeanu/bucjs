@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Slider from './Slider'
 
 const App = () => {
-	const [sliderValue, setSliderValue] = useState(30)
+	const [sliderValue, setSliderValue] = useState(50)
 
 	return (
 		<div
